@@ -11,4 +11,10 @@ public class BankAccountVO {
     private String status;
     private Boolean resultado;
 
+    public String getContaFormatted(){
+        if(conta != null){
+            return conta.replace("-","");
+        }
+        return conta;
+    }
 }
