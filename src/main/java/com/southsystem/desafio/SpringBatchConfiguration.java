@@ -38,6 +38,9 @@ public class SpringBatchConfiguration {
                 .reader(itemReader)
                 .processor(itemProcessor)
                 .writer(itemWriter)
+                .faultTolerant()
+                .retryLimit(3)
+                .retry(RuntimeException.class) // Nova tentatica quando cair no cenario de erro no serviço (0,1% de erro)
                 .build();
 
         return jobBuilderFactory.get("ProcessCSVFileAccount")
