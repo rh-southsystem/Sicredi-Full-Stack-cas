@@ -106,7 +106,6 @@ public class BatchConfig {
 
 
         writer.setAppendAllowed(false);
-
         writer.setLineAggregator(delimitedLineAggregator);
 
         return writer;
