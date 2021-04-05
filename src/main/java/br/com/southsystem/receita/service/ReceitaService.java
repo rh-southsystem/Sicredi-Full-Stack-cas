@@ -1,8 +1,11 @@
 package br.com.southsystem.receita.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ReceitaService {
 
     // Esta é a implementação interna do "servico" do banco central. Veja o código fonte abaixo para ver os formatos esperados pelo Banco Central neste cenário.
